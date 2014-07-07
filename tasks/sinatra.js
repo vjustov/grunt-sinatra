@@ -10,7 +10,8 @@
 
 module.exports = function(grunt) {
 
-  var spawn = require('child_process').spawn;
+  var spawn = require('child_process').spawn,
+      sinatra = require('../lib/sinatra');
   var _currentProcess;
 
   // Please see the Grunt documentation for more information regarding task
@@ -58,14 +59,7 @@ module.exports = function(grunt) {
 
     switch(command) {
       case 'start':
-        // args.unshift('server');
-        _currentProcess = spawn('rackup', args, {
-            stdio: ['ignore', process.stdout, 'ignore']
-        });
-
-        process.on('exit', function() {
-          _currentProcess.kill();
-        });
+        sinatra.start();
         break;
       case 'restart':
         if(_currentProcess) {
