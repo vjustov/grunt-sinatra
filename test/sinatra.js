@@ -1,6 +1,6 @@
 var should = require("should"),
     running = require("is-running"),
-    sinatra = require("../tasks/sinatra");
+    sinatra = require("../lib/sinatra");
 
 describe("grunt-sinatra", function(){
   it("should run the server", function(){
