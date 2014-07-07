@@ -5,15 +5,11 @@ var should = require("should"),
 describe("grunt-sinatra", function(){
   it("should run the server", function(){
     //code here
+    sinatra.start();
+    running(sinatra.pid()).should.equal(true);
   });
-  it("should kill the server", function(){
-    //code here
-  })
-  it("should restart a running server", function(){
-    //code here
-  })
-  it("should kill the server when the task finishes", function(){
-    //code here
-  })
+
+  it("should kill the server");
+  it("should restart a running server");
+  it("should kill the server when the task finishes");
 })
-running(pid).
