@@ -1,11 +1,11 @@
 {
   "name": "grunt-sinatra",
   "description": "Control your sinatra server via Grunt",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/vjustov/grunt-sinatra",
   "author": {
     "name": "Viktor Justo",
-    "email": "viktor.is.a.genius@gmail.com"
+    "email": "viktor@vjustov.me"
   },
   "repository": {
     "type": "git",
