@@ -51,8 +51,11 @@ module.exports = function(grunt) {
     }
 
     switch(command) {
+      case 'serve':
+        sinatra.serve(args, opts);
+        break;
       case 'start':
-        sinatra.start();
+        sinatra.start(args, opts);
         break;
       case 'restart':
         if(_currentProcess) {
