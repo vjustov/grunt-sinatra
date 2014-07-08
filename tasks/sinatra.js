@@ -33,28 +33,21 @@ module.exports = function(grunt) {
       args.push("-p", options.port);
     }
 
-    if(grunt.util._.has(options, "binding")) {
-      args.push("-b", options.binding);
-    }
-
-    if(grunt.util._.has(options, "config")) {
-      args.push("-c", options.config);
-    }
-
     if(grunt.util._.has(options, "daemon")) {
-      args.push("--daemon");
+      args.push("--daemonize");
     }
 
     if(grunt.util._.has(options, "debugger")) {
-      args.push("--debugger");
+      args.push("--debug");
     }
 
     if(grunt.util._.has(options, "environment")) {
-      args.push("-e", options.environment);
+      args.push("--env", options.environment);
     }
 
     if(grunt.util._.has(options, "pid")) {
-      _pidFile = options.pid;
+      args.push("--pid", options.pid);
+      //_pidFile = options.pid;
     }
 
     switch(command) {
