@@ -1,7 +1,7 @@
 {
   "name": "grunt-sinatra",
   "description": "Control your sinatra server via Grunt",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/vjustov/grunt-sinatra",
   "author": {
     "name": "Viktor Justo",
@@ -12,7 +12,7 @@
     "url": "https://github.com/vjustov/grunt-sinatra"
   },
   "bugs": {
-    "url": "https://github.com/vjustov/grunt-sinatra"
+    "url": "https://github.com/vjustov/grunt-sinatra/issues"
   },
   "licenses": [
     {
@@ -39,7 +39,7 @@
     "grunt": "~0.4.1"
   },
   "keywords": [
-    "gruntplugin"
+    "gruntplugin", "sinatra", "rack", "server", "ruby"
   ],
   "dependencies": {
   }
