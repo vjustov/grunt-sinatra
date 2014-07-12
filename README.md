@@ -23,7 +23,6 @@ grunt.loadNpmTasks('grunt-sinatra');
 The sinatra:serve task can run without configuration by default, it will run `rackup` on the project root, serving the files on the port 9292.
 
 ### Getting Started
-
 In your project's Gruntfile, add `sinatra:serve` to the taskList object passed into `grunt.registerTask`.
 
 ```js
@@ -40,6 +39,16 @@ In your project's Gruntfile, add `sinatra:serve` to the taskList object passed i
 		'open:chromium',
 		'watch'
 	]);
+```
+
+##Running tests
+To run the test suite, first invoke the following command within the repo, installing the development dependencies:
+```shell
+$ npm install
+```
+Then run the tests:
+```shell
+$ make test
 ```
 
 ## Contributing
