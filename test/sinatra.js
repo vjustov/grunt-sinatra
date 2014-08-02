@@ -9,7 +9,12 @@ describe("grunt-sinatra", function(){
     running(sinatra.pid()).should.equal(true);
   });
 
-  it("should kill the server");
+  it("should kill the server", function(){
+    running(sinatra.pid()).should.equal(true);
+    sinatra.kill();
+    running(sinatra.pid()).should.equal(false);
+  });
+
   it("should restart a running server");
   it("should kill the server when the task finishes");
 })
