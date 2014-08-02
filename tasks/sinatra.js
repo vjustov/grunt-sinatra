@@ -79,16 +79,7 @@ module.exports = function(grunt) {
         }
         break;
       case 'kill':
-        if(_currentProcess) {
-          _currentProcess.kill('QUIT');
-        } else {
-          if(grunt.file.exists(_pidFile)) {
-            args = ['-s', 'QUIT', grunt.file.read(_pidFile)];
-          }
-          spawn('kill', args, {
-            stdio: 'inherit'
-          });
-        }
+        sinatra.kill(args, opts);
         break;
     }
 
