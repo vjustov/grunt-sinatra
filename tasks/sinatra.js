@@ -12,16 +12,13 @@ module.exports = function(grunt) {
 
   var spawn = require('child_process').spawn,
       sinatra = require('../lib/sinatra');
-  var _currentProcess;
 
   // Please see the Grunt documentation for more information regarding task
   // creation: http://gruntjs.com/creating-tasks
 
   // grunt.registerTask('rails:server:restart', ['rails:server:kill', 'rails:server:start']);
 
-  var _pidFile = "tmp/pids/server.pid";
-
-  grunt.registerTask('sinatra', 'Control your sinatra server via Grunt', function(name, command) {
+  grunt.registerTask('sinatra', 'Control your sinatra server via Grunt', function(command) {
 
     command = command || 'start';
 
