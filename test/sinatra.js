@@ -8,9 +8,9 @@ describe("grunt-sinatra", function(){
     pidFile: "/tmp/sinatraServer.pid"
   }
 
-  it("should run the server", function(){
+  it("should start the server", function(){
     //code here
-    sinatra.start();
+    sinatra.start(args, opts);
     running(sinatra.pid()).should.equal(true);
   });
 
