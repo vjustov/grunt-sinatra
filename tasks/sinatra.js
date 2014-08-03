@@ -23,27 +23,27 @@ module.exports = function(grunt) {
     command = command || 'start';
 
     var args = [];
+    var opts = this.options();
+    opts.pidFile = opts.pidFile || "/tmp/sinatraServer.pid";
 
-    var options = this.options();
-
-    if(grunt.util._.has(options, "port")) {
-      args.push("-p", options.port);
+    if(grunt.util._.has(opts, "port")) {
+      args.push("-p", opts.port);
     }
 
-    if(grunt.util._.has(options, "daemon")) {
+    if(grunt.util._.has(opts, "daemon")) {
       args.push("--daemonize");
     }
 
-    if(grunt.util._.has(options, "debugger")) {
+    if(grunt.util._.has(opts, "debugger")) {
       args.push("--debug");
     }
 
-    if(grunt.util._.has(options, "environment")) {
-      args.push("--env", options.environment);
+    if(grunt.util._.has(opts, "environment")) {
+      args.push("--env", opts.environment);
     }
 
-    if(grunt.util._.has(options, "pid")) {
-      args.push("--pid", options.pid);
+    if(grunt.util._.has(opts, "pid")) {
+      args.push("--pid", opts.pid);
       //_pidFile = options.pid;
     }
 
