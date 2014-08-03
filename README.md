@@ -22,6 +22,23 @@ grunt.loadNpmTasks('grunt-sinatra');
 ### Overview
 The sinatra:serve task can run without configuration by default, it will run `rackup` on the project root, serving the files on the port 9292.
 
+####Sinatra:serve
+Launches the server and whenever the the parent process ends, it terminates the server.
+
+####Sinatra:start
+Launches the server and leaves it running even when the parent process is no longer running.
+
+####Sinatra:kill
+Terminates an already running server.
+
+###Options
+pidFile
+
+Type: `String`
+Default: `'/tmp/sinatraServer.pid'`
+
+Path to the pid file in case you wanna run the server by itself.
+
 ### Getting Started
 In your project's Gruntfile, add `sinatra:serve` to the taskList object passed into `grunt.registerTask`.
 
@@ -48,7 +65,7 @@ $ npm install
 ```
 Then run the tests:
 ```shell
-$ make test
+$ make tests
 ```
 
 ## Contributing
