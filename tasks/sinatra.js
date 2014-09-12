@@ -21,7 +21,7 @@ module.exports = function(grunt) {
   grunt.registerTask('sinatra', 'Control your sinatra server via Grunt', function(command) {
 
     command = command || 'start';
-
+console.log("args?");
     var args = [];
     var opts = this.options();
     opts.pidFile = opts.pidFile || "/tmp/sinatraServer.pid";
@@ -46,7 +46,7 @@ module.exports = function(grunt) {
       args.push("--pid", opts.pid);
       //_pidFile = options.pid;
     }
-
+console.log("yes args");
     switch(command) {
       case 'serve':
         sinatra.serve(args, opts);
