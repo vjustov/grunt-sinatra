@@ -11,6 +11,7 @@ describe("grunt-sinatra", function(){
   it("should start the server", function(){
     //code here
     sinatra.start(args, opts);
+    console.log(sinatra.pid());
     running(sinatra.pid()).should.equal(true);
   });
 
