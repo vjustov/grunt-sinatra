@@ -11,7 +11,7 @@
 module.exports = function(grunt) {
 
   var spawn = require('child_process').spawn,
-      sinatra = require('../lib/sinatra');
+    sinatra = require('../lib/sinatra');
 
   // Please see the Grunt documentation for more information regarding task
   // creation: http://gruntjs.com/creating-tasks
