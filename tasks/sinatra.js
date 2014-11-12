@@ -47,6 +47,8 @@ module.exports = function(grunt) {
       //_pidFile = options.pid;
     }
 
+    // TODO: Set stdio from the gruntfile.
+
     switch(command) {
       case 'serve':
         sinatra.serve(args, opts);
