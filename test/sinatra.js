@@ -25,4 +25,32 @@ describe("grunt-sinatra", function(){
 
   it("should restart a running server");
   it("should kill the server when the task finishes");
+
+  it("accepts a port argument", function(){
+    args = ["-p", "3987"]
+
+    sinatra.start(args, opts);
+    running(sinatra.pid()).should.equal(true);
+  });
+
+  it("sets the --env flag", function(){
+    args = ["--env", "production"]
+
+    sinatra.start(args, opts);
+    running(sinatra.pid()).should.equal(true);
+  });
+
+  it("sets --daemon flag", function(){
+    args = ["--daemonize"]
+
+    sinatra.start(args, opts);
+    running(sinatra.pid()).should.equal(true);
+  });
+
+  it("sets the --pid flag", function(){
+    args = ["--pid", "54392"]
+
+    sinatra.start(args, opts);
+    running(sinatra.pid()).should.equal(true);
+  });
 })
