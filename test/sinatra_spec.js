@@ -31,6 +31,7 @@ describe("grunt-sinatra", function(){
 
     sinatra.start(args, opts);
     running(sinatra.pid()).should.equal(true);
+    sinatra.port().should.equal(3987);
   });
 
   it("sets the --env flag", function(){
@@ -38,6 +39,7 @@ describe("grunt-sinatra", function(){
 
     sinatra.start(args, opts);
     running(sinatra.pid()).should.equal(true);
+    sinatra.env().should.equal("production");
   });
 
   it("sets --daemon flag", function(){
@@ -45,6 +47,7 @@ describe("grunt-sinatra", function(){
 
     sinatra.start(args, opts);
     running(sinatra.pid()).should.equal(true);
+    sinatra.daemon().should.equal(true);
   });
 
   it("sets the --pid flag", function(){
@@ -52,5 +55,6 @@ describe("grunt-sinatra", function(){
 
     sinatra.start(args, opts);
     running(sinatra.pid()).should.equal(true);
+    sinatra.pid().should.equal(54392);
   });
 })
