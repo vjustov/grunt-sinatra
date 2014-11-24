@@ -24,7 +24,6 @@ module.exports = function(grunt) {
 
     var args = [];
     var opts = this.options();
-    opts.pidFile = opts.pidFile || "/tmp/sinatraServer.pid";
 
     if(grunt.util._.has(opts, "port")) {
       args.push("-p", opts.port);
@@ -44,7 +43,7 @@ module.exports = function(grunt) {
 
     if(grunt.util._.has(opts, "pid")) {
       args.push("--pid", opts.pid);
-      //_pidFile = options.pid;
+      opts[pidFile] = opts.pid;
     }
 
     // TODO: Set stdio from the gruntfile.
